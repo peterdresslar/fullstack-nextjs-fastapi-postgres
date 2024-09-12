@@ -1,0 +1,32 @@
+{
+  "name": "fullstack-nextjs-flask-postgres",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "fastapi-dev": "pip3 install -r requirements.txt && uvicorn api.main:app --reload --port 5328",
+    "next-dev": "next dev",
+    "dev": "concurrently \"pnpm run next-dev\" \"pnpm run fastapi-dev\"",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "init-db": "flask --app api/index db init",
+    "migrate-db": "flask --app api/index db migrate",
+    "upgrade-db": "flask --app api/index db upgrade",
+    "seed-db": "python -m api.seed"
+  },
+  "dependencies": {
+    "@types/node": "20.1.4",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
+    "autoprefixer": "10.4.14",
+    "concurrently": "^8.2.2",
+    "eslint": "8.40.0",
+    "eslint-config-next": "13.4.2",
+    "next": "14.2.8",
+    "postcss": "8.4.23",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.5.4"
+  }
+}

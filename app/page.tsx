@@ -9,9 +9,13 @@ export default function Home() {
 
   useEffect(() => {
     fetch('/api/python')
-      .then((res) => res.text())
+      .then((res) => res.json())
       .then((data) => {
-        setMessage(data)
+        setMessage(data.message)
+      })
+      .catch((error) => {
+        console.error('Error fetching message:', error)
+        setMessage('Error loading message')
       })
 
     const fetchMigrationInfo = () => {

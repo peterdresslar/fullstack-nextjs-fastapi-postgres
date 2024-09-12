@@ -25,7 +25,7 @@ Base.metadata.create_all(bind=engine)
 
 @app.get("/api/python")
 def hello_world():
-    return {"message": "Hello, World!"}
+    return {"message": "<p>Hello, World!</p>"}
 
 @app.get("/api/migration")
 def get_latest_migration():

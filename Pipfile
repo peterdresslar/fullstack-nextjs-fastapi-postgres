@@ -8,4 +8,4 @@ fastapi = "==0.114.1"
 uvicorn = "==0.30.6"
 
 [requires]
-python_version = "3.12"
+python_version = "3.9"
